@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %} Order The Appointment {% endblock %}
+
+
+{% block content %} 
+
+<section class="main">
+    <div class="main-centering">
+        <form action="" method="post" class="appointment-form">
+            {% csrf_token %}
+            <div class="form-centering">
+                <h2 class="form-title">Make an appointment</h2>
+                {{ appointmentFormInputs }}
+                <div class="button-wrapper">
+                    <button class="make-appointment-button">MAKE AN APPOINTMENT</button>
+                </div>
+                
+            </div>
+            
+        </form>
+        <div class="form-info-text">
+            <p class="top-info-text">Maxime placeat facere possimus omnis</p>
+            <p class="info-stat">17k</p>
+            <p class="bottom-info-text">customers served (and counting)</p>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}

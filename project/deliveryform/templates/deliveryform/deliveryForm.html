@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %} Order The Delivery {% endblock %}
+
+
+{% block content %} 
+
+<form action="orders" method="post">
+    {% csrf_token %}
+    {{ deliveryFormInputs }}
+
+    <button>Send</button>
+
+
+</form>
+
+{% endblock %}
